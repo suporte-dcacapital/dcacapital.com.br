@@ -1,2 +1,204 @@
-<h1>Meu site está online!</h1>
-<p>Consegui configurar o GitHub e a Vercel.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>DCA Capital</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#C9A96E;
+  --gold-light:#E8D5A3;
+  --gold-dim:#8A6E42;
+  --bg:#080809;
+  --muted:rgba(255,255,255,0.4);
+  --ff-d:"Cormorant Garamond",Georgia,serif;
+  --ff-b:"Outfit",sans-serif
+}
+html,body{
+  height:100%;
+  background:var(--bg);
+  color:#fff;
+  font-family:var(--ff-b);
+  font-weight:300;
+  -webkit-font-smoothing:antialiased
+}
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 24px;
+  position:relative;
+  overflow:hidden
+}
+.glow{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(201,169,110,0.07) 0%,transparent 70%)
+}
+.lines{position:fixed;inset:0;pointer-events:none}
+.lh{
+  position:absolute;
+  left:0;right:0;
+  height:0.5px;
+  background:linear-gradient(90deg,transparent,rgba(201,169,110,0.12),transparent)
+}
+.lv{
+  position:absolute;
+  top:0;bottom:0;
+  width:0.5px;
+  background:linear-gradient(180deg,transparent,rgba(201,169,110,0.1),transparent)
+}
+.wrap{
+  position:relative;
+  z-index:2;
+  max-width:580px;
+  width:100%;
+  animation:up .8s cubic-bezier(.22,1,.36,1) both
+}
+@keyframes up{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+.logo-wrap{margin-bottom:44px}
+.logo-wrap img{height:64px;width:auto}
+
+.rule{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  justify-content:center;
+  margin-bottom:28px
+}
+.rl{height:0.5px;width:40px;background:linear-gradient(90deg,transparent,var(--gold-dim))}
+.rr{height:0.5px;width:40px;background:linear-gradient(90deg,var(--gold-dim),transparent)}
+.rd{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+
+.eyebrow{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:20px
+}
+.headline{
+  font-family:var(--ff-d);
+  font-size:clamp(38px,6vw,62px);
+  font-weight:300;
+  line-height:1.06;
+  color:#fff;
+  margin-bottom:8px
+}
+.headline em{font-style:italic;color:var(--gold-light)}
+.subline{
+  font-family:var(--ff-d);
+  font-size:clamp(18px,2.5vw,26px);
+  font-style:italic;
+  color:rgba(255,255,255,0.38);
+  margin-bottom:36px
+}
+.body{
+  font-size:14px;
+  line-height:1.9;
+  color:var(--muted);
+  max-width:420px;
+  margin:0 auto 44px
+}
+.divider{
+  width:40px;
+  height:0.5px;
+  background:rgba(201,169,110,0.3);
+  margin:0 auto 32px
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 36px;
+  border:1px solid rgba(201,169,110,0.45);
+  border-radius:2px;
+  color:var(--gold-light);
+  font-family:var(--ff-b);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:background .2s,color .2s,border-color .2s
+}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:#080809}
+.btn svg{width:15px;height:15px;flex-shrink:0}
+
+.hint{
+  font-size:11px;
+  color:rgba(255,255,255,0.2);
+  letter-spacing:.06em;
+  margin-top:14px
+}
+.footer{
+  position:relative;
+  z-index:2;
+  margin-top:60px;
+  font-size:11px;
+  color:rgba(255,255,255,0.15);
+  letter-spacing:.08em
+}
+</style>
+</head>
+<body>
+
+<div class="glow"></div>
+<div class="lines">
+  <div class="lh" style="top:9%"></div>
+  <div class="lh" style="bottom:9%"></div>
+  <div class="lv" style="left:7%"></div>
+  <div class="lv" style="right:7%"></div>
+</div>
+
+<div class="wrap">
+
+  <div class="logo-wrap">
+    <!-- Substitua pelo caminho da sua logo -->
+    <img src="logo.png" alt="DCA Capital"/>
+  </div>
+
+  <div class="rule">
+    <div class="rl"></div>
+    <div class="rd"></div>
+    <div class="rr"></div>
+  </div>
+
+  <div class="eyebrow">Em breve</div>
+
+  <h1 class="headline">Algo novo<br/>está <em>chegando</em></h1>
+  <p class="subline">Para quem pensa além do óbvio.</p>
+
+  <div class="divider"></div>
+
+  <p class="body">
+    Estamos construindo algo diferente — uma plataforma para brasileiros que vivem no exterior e querem transformar renda em patrimônio no Brasil, com inteligência e sem burocracia.
+  </p>
+
+  <a class="btn" href="https://instagram.com/dca.capital" target="_blank">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+    </svg>
+    Acompanhe no Instagram
+  </a>
+
+  <p class="hint">@dca.capital</p>
+
+</div>
+
+<div class="footer">© 2026 DCA Capital · dcacapital.com.br</div>
+
+</body>
+</html>
